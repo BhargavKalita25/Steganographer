@@ -1,0 +1,10 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "node run.js --setup",
+    "dev": "node run.js",
+    "test": "node run.js --test"
+  }
+}

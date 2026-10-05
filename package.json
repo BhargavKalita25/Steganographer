@@ -1,0 +1,22 @@
+{
+  "name": "steganographer",
+  "version": "1.0.0",
+  "description": "Full-stack image steganography platform built with Next.js, Material-UI, FastAPI, and cryptographic encryption.",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm --workspace server run setup",
+    "dev": "npx --yes concurrently -k --prefix none \"npm --workspace server run dev\" \"npm --workspace client run dev\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:client": "npm --workspace client run dev",
+    "build": "npm --workspace client run build",
+    "lint": "npm --workspace client run lint",
+    "test": "npm --workspace server test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
